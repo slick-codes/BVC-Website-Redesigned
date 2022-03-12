@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonny Vocational Centre</title>
+    <link rel="stylesheet" href="./assets/styles/css/main.css">
+    <link rel="shortcut icon" href="./assets/images/BVC-Logo-2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <section class="nav__logo-section">
+            <div class="nav__logo-container">
+                <img src="./assets/images/BVC-Logo-1.png" alt="Bonny Vocational Center's Logo" class="nav__logo">
+            </div>
+        </section>
+        <div class="nav__container">
+            <section class="nav__link-container">
+                <label id="visit"><a href="#">Home</a></label>
+                <label class="dropdown__link">
+                    <label><a href="#">About Us <i class="fa fa-angle-down"></i></a></label>
+                    <section class="aboutus__dropdown dropdown__list dropdown">
+                        <label><a href="#">Who We Are</a></label>
+                        <label><a href="#">Accredential</a></label>
+                        <label><a href="#">Centre Tour</a></label>
+                        <label><a href="#">School Calender</a></label>
+                        <label><a href="#">Management Team</a></label>
+                    </section>
+                </label>
+                <label class="course__label dropdown__link">
+                    <label><a href="#">Courses <i class="fa fa-angle-down"></i></a></label>
+                    <section class="course dropdown__list dropdown">
+                        <section class="course__card">
+                            <h2>Technical & Vocational-Related Qualifications</h2>
+                            <div class="course__image-container">
+                                <img src="./assets/images/slides/girl.jpg" alt="" class="course__image">
+                            </div>
+                            <div class="link__container">
+                                <label> <a href="#">Building Construction</a></label>
+                                <label> <a href="#">Business Support</a></label>
+                                <label> <a href="#">Catering and Hospitality</a></label>
+                                <label> <a href="#">Electrical Installation</a></label>
+                                <label> <a href="#">IT Support System</a></label>
+                                <label> <a href="#">Mechanical Plant Maintenance</a></label>
+                                <label> <a href="#">Refreigeration and Air-Conditioning</a></label>
+                            </div>
+                        </section>
+                        <section class="course__card">
+                            <h2>Professional & Short Courses</h2>
+                            <div class="course__image-container">
+                                <img src="./assets/images/slides/girl-writing.jpg" alt="" class="course__image">
+                            </div>
+                            <div class="link__container">
+                                <label> <a href="#">Enterprise and Entrepreneurship</a></label>
+                                <label> <a href="#">Food Safety in Catering</a></label>
+                                <label> <a href="#">Forklift Operation</a></label>
+                                <label> <a href="#">Fundamentals of Pipefitting</a></label>
+                                <label> <a href="#">Health and Safety</a></label>
+                                <label> <a href="#">Instrumentation and Process Automation</a></label>
+                                <label> <a href="#">Leadership and Team Skills</a></label>
+                                <label> <a href="#">School Business Management</a></label>
+                                <label> <a href="#">Skill Proficiency Certificates</a></label>
+                                <label> <a href="#">Teaching, Training and Assessiong Learning</a></label>
+                            </div>
+                        </section>
+                    </section>
+                </label>
+                <label class="dropdown__link">
+                    <label><a href="#">Adminssions <i class="fa fa-angle-down"></i></a></label>
+                    <section class="administration__dropdown dropdown__list  dropdown">
+                        <label><a href="#"> Technical & Vocational-Related Qualifications</a></label>
+                        <label><a href="#">Professional & Short Courses</a></label>
+                    </section>
+                </label>
+                <label> <a href="#">News</a></label>
+                <label> <a href="#">Contact Us</a></label>
+            </section>
+            <section class="nav__icon-container">
+                <div class="nav__menu hide">
+                    <div class="nav__icon"></div>
+                </div>
+            </section>
+        </div>
+    </nav>
+
+    <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni debitis, ratione quam iste vitae dicta autem recusandae fugiat, aspernatur sunt velit! Laboriosam, dicta accusantium repellat porro id soluta tempore. Aspernatur. -->
+
+
+    <script>
+        const navigation = document.querySelector('nav.nav')
+        const navToggleButton = document.querySelector('.nav__menu')
+        const navLogo = document.querySelector('.nav__logo')
+        const navDesktopViewScreen = 1000
+        const navLinks = document.querySelectorAll('label.dropdown__link')
+        const navSlider = document.querySelector('.nav__link-container')
+        
+
+        console.log(navLinks)
+
+        function resetMenu() {
+            const dropdown = document.querySelectorAll('.dropdown')
+            dropdown.forEach(list => list.classList.remove('show'))
+            
+            // navSlider.addEventListener('animationend' , function(event){
+            //     console.log('animation ended')
+            // })
+        }
+
+        navToggleButton.onclick = function (event) {
+            navigation.classList.toggle('active')
+            event.target.classList.toggle('hide')
+            resetMenu()
+        }
+
+
+        function fixLogo() {
+            if (window.innerWidth < 1000) {
+                const image = window.innerWidth > navDesktopViewScreen ? 'BVC-Logo-1.png' : 'BVC-Logo-2.png';
+                // navLogo.src = `assets/images/${image}`
+            }
+        }
+
+
+
+
+        navLinks.forEach((navItem, index) => {
+
+            navItem.onclick = function (event) {
+                event.stopPropagation()
+                const dropdown = document.querySelectorAll('.dropdown')
+                // dropdown.forEach(node => node.classList.remove('show'))
+                resetMenu()
+
+                dropdown[index].classList.toggle('show')
+
+            }
+
+        })
+
+        window.onload = function () {
+            fixLogo()
+            window.onload = () => fixLogo
+        }
+    </script>
+
+</body>
+
+</html>
