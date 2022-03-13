@@ -8,13 +8,9 @@ const navSlider = document.querySelector('.nav__link-container')
 
 console.log(navLinks)
 
-function resetMenu() {
+function resetMenu( node ) {
     const dropdown = document.querySelectorAll('.dropdown')
-    dropdown.forEach(list => list.classList.remove('show'))
-    
-    // navSlider.addEventListener('animationend' , function(event){
-    //     console.log('animation ended')
-    // })
+    dropdown.forEach(list => (list != node)&&  list.classList.remove('show') )
 }
 
 navToggleButton.onclick = function (event) {
@@ -42,9 +38,8 @@ navLinks.forEach((navItem, index) => {
         
         event.stopPropagation()
         const dropdown = document.querySelectorAll('.dropdown')
-        // dropdown.forEach(node => node.classList.remove('show'))
-        resetMenu()
-
+        
+        resetMenu(dropdown[index])
         dropdown[index].classList.toggle('show')
 
     }
@@ -55,3 +50,4 @@ window.onload = function () {
     fixLogo()
     window.onload = () => fixLogo
 }
+

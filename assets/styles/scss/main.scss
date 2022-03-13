@@ -44,14 +44,15 @@
         width: 80%;
         justify-content: flex-start;
         padding-top: 3em;
-        transform:translateX(-100%);
+        transform: translateX(-100%);
         transition: .1s;
         box-shadow: 7px 0px 20px 0px #dbdbdb73;
-        backdrop-filter: blur(2px);
-        z-index:4;
+        backdrop-filter: blur(7px);
+        z-index: 4;
+        overflow-y: auto;
 
 
-        > label {
+        >label {
             padding: 1em 0;
 
             // position:relative;
@@ -67,31 +68,31 @@
                 font-size: 14px;
                 font-family: $basefont-semibold;
                 display: block;
-                padding-left: 4em;
+                padding-left: 2em;
                 // font-weight:bolder;
                 text-transform: uppercase;
                 // background:blue;
             }
 
-           .dropdown.show{
+            .dropdown.show {
                 // background-color:blue;
-                height:100%;
-                transition:.1s;
+                height: 100%;
+                transition: .1s;
             }
 
 
             .dropdown {
-                height:0;
-                overflow:hidden;
+                height: 0;
+                overflow: hidden;
 
                 &__list {
                     padding-right: .4em;
 
                     label {
-                        width:100%;
-                        padding:.2em .4em;
-                        padding-left:.4em;
-                        display:block;
+                        width: 100%;
+                        padding: .2em .4em;
+                        padding-left: .4em;
+                        display: block;
 
 
                         a {
@@ -104,13 +105,52 @@
                             }
                         }
 
-                      
+
                     }
 
                 }
 
-                &.course{
-                    display:none;
+                &.course {
+                    padding-left: 2.3em;
+                    padding-top: .4em;
+
+                    h2 {
+                        font-size: 18px;
+                        padding-top: .1em;
+                        padding-right: .4em;
+                        font-family:$basefont-regular;
+                    }
+
+                    &>section:last-child h2 {
+                        padding-top: 1em;
+                    }
+
+                    .course__image-container {
+                        width: 79%;
+                        padding: .5em 0;
+                        display: none;
+
+                        img {
+                            width: 100%;
+                        }
+
+                    }
+
+                    .link__container {
+                        padding-left: 0;
+
+                        label {
+                            padding: .3em 0;
+                            padding-right: .7em;
+
+                            a {
+                                padding: 0 !important;
+                                padding-right: .7em;
+                            }
+                        }
+                    }
+
+
                 }
             }
 
@@ -125,27 +165,28 @@
         padding: .5em 0;
         cursor: pointer;
         // z-index: 14;
-        
 
-        &.hide:after{
-            display:none;
+
+        &.hide:after {
+            display: none;
         }
 
 
-        &:after{
-            content:"";
+        &:after {
+            content: "";
             display: block;
             left: 0;
-            top:0;
-            height:100vh;
-            width:100%;
-            position:absolute;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            position: absolute;
             // background:rgba(0, 0, 0, 0.07);
             z-index: 0;
         }
     }
+
     &__icon {
-        pointer-events:none;
+        pointer-events: none;
         background: black;
         height: .15em;
         width: 1em;
@@ -162,7 +203,7 @@
         &:before {
             background: inherit;
             top: -.33em;
-            height:0.1521em;
+            height: 0.1521em;
         }
 
         &:after {
@@ -177,18 +218,18 @@
     .nav {
         padding: 0em $side-padding;
 
-        
-    &__menu {
-        padding: .5em 0;
-        cursor: pointer;
-        display:none;
-        // z-index: 14;
-        
 
-        &.hide:after{
-            display:none;
+        &__menu {
+            padding: .5em 0;
+            cursor: pointer;
+            display: none;
+            // z-index: 14;
+
+
+            &.hide:after {
+                display: none;
+            }
         }
-    }
 
         &__link-container {
             flex-flow: row;
@@ -202,12 +243,13 @@
             box-shadow: 0px 0px 0px 0px;
             transform: translateY(0);
             transition: 0;
+            overflow-y:initial;
 
             label {
                 padding: initial;
                 padding: 1.4em .7em;
-                width:inherit;
-                display:initial;
+                width: inherit;
+                display: initial;
                 // background:blue;
 
                 a {
@@ -228,7 +270,7 @@
                     display: flex;
                     flex-flow: column;
                     font-weight: 0;
-                    height:initial ;
+                    height: initial;
 
                     transform: translateY(3em);
                     opacity: 0;
@@ -272,12 +314,15 @@
                                 font-size: 1.25rem;
                                 font-family: $basefont-bold;
                                 line-height: 1.5rem;
+                                padding:0 !important;
                                 padding-bottom: .4em;
                                 color: $base-blue;
                             }
+                            
 
                             .course__image-container {
                                 width: 17em;
+                                display:flex;
 
                                 .course__image {
                                     width: 100%;
