@@ -1,12 +1,16 @@
 @import 'config';
 @import url('../../resources/fontawesome-free-6.0.0-web/css/all.css');
 
+
+// Starting of Navigation
 .nav {
     background: white;
     padding: 1em 2em;
     display: flex;
     align-items: center;
     box-shadow: 1px 2px 20px 0px #ededed;
+    position:sticky;
+    top:0em;
 
 
     // &__logo-section{
@@ -40,7 +44,7 @@
         height: 100vh;
         top: 0;
         left: 0;
-        // background:rgba(0, 0, 0, 0.419);
+        background:white;
         width: 80%;
         justify-content: flex-start;
         padding-top: 3em;
@@ -50,6 +54,10 @@
         backdrop-filter: blur(7px);
         z-index: 4;
         overflow-y: auto;
+        padding-bottom:2em;
+
+
+       
 
 
         >label {
@@ -126,9 +134,9 @@
                     }
 
                     .course__image-container {
-                        width: 79%;
+                        width: 14em;
                         padding: .5em 0;
-                        display: none;
+                        // display: none;
 
                         img {
                             width: 100%;
@@ -136,6 +144,7 @@
 
                     }
 
+                   
                     .link__container {
                         padding-left: 0;
 
@@ -214,9 +223,17 @@
 
 }
 
+@media (max-width:300px){
+    .course__image-container{
+        width:100% !important;
+    }
+}
+
 @media (min-width: 1000px) {
     .nav {
         padding: 0em $side-padding;
+        position:sticky;
+        top:0;
 
 
         &__menu {
@@ -366,3 +383,4 @@
 
     }
 }
+// Navigation Ending
