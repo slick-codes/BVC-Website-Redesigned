@@ -9,8 +9,8 @@
     display: flex;
     align-items: center;
     box-shadow: 1px 2px 20px 0px #ededed;
-    position:sticky;
-    top:0em;
+    position: sticky;
+    top: 0em;
 
 
     // &__logo-section{
@@ -44,20 +44,20 @@
         height: 100vh;
         top: 0;
         left: 0;
-        background:white;
+        background: rgba(255, 255, 255, 0.816);
         width: 80%;
         justify-content: flex-start;
         padding-top: 3em;
         transform: translateX(-100%);
         transition: .1s;
-        box-shadow: 7px 0px 20px 0px #dbdbdb73;
-        backdrop-filter: blur(7px);
+        box-shadow:7px 0px 20px 4px #0000001c;
+        backdrop-filter: blur(20px);
         z-index: 4;
         overflow-y: auto;
-        padding-bottom:2em;
+        padding-bottom: 2em;
 
 
-       
+
 
 
         >label {
@@ -65,7 +65,8 @@
 
             // position:relative;
             &#visit {
-                border-bottom: solid 3px $base-blue;
+                // border-bottom: solid 3px $base-blue;
+                border: none !important;
 
                 a {
                     color: $base-blue;
@@ -106,6 +107,7 @@
                         a {
                             font-family: $basefont-regular;
                             text-transform: initial;
+                            color:$base-blue;
 
                             &:hover {
                                 color: $hover-color;
@@ -126,7 +128,7 @@
                         font-size: 18px;
                         padding-top: .1em;
                         padding-right: .4em;
-                        font-family:$basefont-regular;
+                        font-family: $basefont-regular;
                     }
 
                     &>section:last-child h2 {
@@ -136,7 +138,7 @@
                     .course__image-container {
                         width: 14em;
                         padding: .5em 0;
-                        // display: none;
+                        display: none; //TODO comment this if we want the images on the nav for mobile
 
                         img {
                             width: 100%;
@@ -144,7 +146,7 @@
 
                     }
 
-                   
+
                     .link__container {
                         padding-left: 0;
 
@@ -189,8 +191,8 @@
             height: 100vh;
             width: 100%;
             position: absolute;
-            // background:rgba(0, 0, 0, 0.07);
-            z-index: 0;
+            background:#08080826;
+            z-index: -1;
         }
     }
 
@@ -223,17 +225,17 @@
 
 }
 
-@media (max-width:300px){
-    .course__image-container{
-        width:100% !important;
+@media (max-width:300px) {
+    .course__image-container {
+        width: 100% !important;
     }
 }
 
 @media (min-width: 1000px) {
     .nav {
         padding: 0em $side-padding;
-        position:sticky;
-        top:0;
+        position: sticky;
+        top: 0;
 
 
         &__menu {
@@ -260,7 +262,7 @@
             box-shadow: 0px 0px 0px 0px;
             transform: translateY(0);
             transition: 0;
-            overflow-y:initial;
+            overflow-y: initial;
 
             label {
                 padding: initial;
@@ -281,7 +283,8 @@
 
                 .dropdown {
                     position: absolute;
-                    background: white;
+                    background: rgb(255, 255, 255) !important;
+                    // backdrop-filter: blur(76px) ;
                     box-shadow: 0px 4px 6px 0px #0000002b;
                     pointer-events: none;
                     display: flex;
@@ -289,9 +292,28 @@
                     font-weight: 0;
                     height: initial;
 
+
                     transform: translateY(3em);
                     opacity: 0;
                     transition: .2s;
+
+                    // &::before{
+                    //     content:"";
+                    //     display:block;
+                    //     height:100%;
+                    //     width:100%;
+                    //     top:0;
+                    //     left:0;
+                    //     z-index:-1;
+                    //     position:absolute;
+                    //     // background:rgba(255, 255, 255, 0.926);
+                    //     backdrop-filter: blur(4px);
+                    // }
+
+
+                
+
+                    
 
 
                     &__list {
@@ -315,12 +337,12 @@
                         display: flex;
                         flex-flow: row;
                         right: 0;
-                        //    opacity:1;
                         padding: 1em 3em;
                         padding-bottom: 2em;
-                        //    width:100%;
+                        
 
-
+                       
+    
                         .course__card {
 
                             &:last-child {
@@ -331,15 +353,15 @@
                                 font-size: 1.25rem;
                                 font-family: $basefont-bold;
                                 line-height: 1.5rem;
-                                padding:0 !important;
+                                padding: 0 !important;
                                 padding-bottom: .4em;
                                 color: $base-blue;
                             }
-                            
+
 
                             .course__image-container {
                                 width: 17em;
-                                display:flex;
+                                display: flex;
 
                                 .course__image {
                                     width: 100%;
@@ -383,4 +405,5 @@
 
     }
 }
+
 // Navigation Ending

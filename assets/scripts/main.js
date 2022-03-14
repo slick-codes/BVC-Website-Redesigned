@@ -21,6 +21,7 @@ navToggleButton.onclick = function (event) {
 
 
 function fixLogo() {
+    resetMenu()
     if (window.innerWidth < navDesktopViewScreen) {
         const image = window.innerWidth > navDesktopViewScreen ? 'BVC-Logo-1.png' : 'BVC-Logo-2.png';
         // navLogo.src = `assets/images/${image}`
@@ -28,13 +29,11 @@ function fixLogo() {
 }
 
 
-
-
 navLinks.forEach((navItem, index) => {
 
     navItem.onclick = function (event) {
-    if(window.innerWidth > navDesktopViewScreen)
-        return 
+    if(window.innerWidth >= navDesktopViewScreen)
+        return resetMenu()
         
         event.stopPropagation()
         const dropdown = document.querySelectorAll('.dropdown')

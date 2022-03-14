@@ -1,7 +1,12 @@
-@import 'main';
-
+// @import 'main';
+@import url('main.css');
 
 header{
     padding:15em 0;
-    background:$gray;
+    // background:$gray;
+    background:#bfc1c5;
+    background-image:url(../../images/slides/welder.jpg);
+    background-size:cover;
+    background-position:right;
 }
+
