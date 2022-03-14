@@ -32,6 +32,7 @@ function fixLogo() {
 navLinks.forEach((navItem, index) => {
 
     navItem.onclick = function (event) {
+        event.preventDefault()
     if(window.innerWidth >= navDesktopViewScreen)
         return resetMenu()
         
