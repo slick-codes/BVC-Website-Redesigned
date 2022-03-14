@@ -1,5 +1,5 @@
-// @import 'main';
-@import url('main.css');
+@import 'main';
+// @import url('main.css');
 
 header{
     padding:15em 0;
@@ -8,5 +8,149 @@ header{
     background-image:url(../../images/slides/welder.jpg);
     background-size:cover;
     background-position:right;
+    background-repeat: no-repeat;
 }
 
+
+
+main{
+    display:flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items:center;
+    padding:3em 0;
+    
+    .about{
+        // background:blue;
+        padding-top:3em;
+        display:flex;
+        flex-flow:column;
+        flex-direction:column-reverse;
+        // padding:3em 2em;
+        justify-content:center;
+        align-items:center;
+        width:85%;
+
+        > section{
+            width:100%;
+
+            &:not(:first-child){
+                // margin-left:3em;
+            }
+        }
+
+        &__text-container{
+            padding-top:2em;
+
+            h2{
+                font-family:$basefont-semibold;
+                font-size:2rem;
+                padding-bottom:0em;
+            }
+            p{
+                line-height:1.9em;
+                font-size:.9rem;
+                font-family:$basefont-regular;
+                padding-bottom:1em;
+                // text-align:justify;
+                a{
+                    color:$base-blue;
+
+                    &:hover{
+                        text-decoration:underline;
+                        font-style:italic;
+                    }
+                }
+                
+            }
+            > a{
+                border:solid 2px $base-blue;
+                padding:.2em 1em;
+                font-family:$basefont-semibold;
+            }
+        }
+
+        .card{
+            // background:rgba(223, 223, 223, 0.159);
+            // margin-top:1em;
+            display: flex;
+            flex-flow:column;
+            justify-content:center;
+            align-items:center;
+            border-bottom:solid .1em $base-blue;
+            padding:1em;
+            // box-shadow:0px 0px 10px 0px #0000000c;
+
+            &__icon{
+                padding:1em;
+            }
+
+            h2{
+                font-family: $basefont-semibold;
+                color:black;
+                text-align:center;
+            }
+
+            p{
+                text-align:center;
+                color:black;
+                font-family:$basefont-regular;
+
+            }
+        }
+
+    }
+}
+
+@media (min-width:900px) {
+    main{
+    
+        .about{
+            width:89%;
+            padding:1em 0em;
+            flex-direction:row;
+    
+            > section{
+                width:100%;
+    
+                &:not(:first-child){
+                    margin-left:3em;
+                }
+            }
+    
+            .card{
+                flex-flow:row;
+                padding:.5em 1em ;
+                padding-top:.7em;
+
+                &:not(:first-child){
+                    margin-top:0em;
+                }
+
+                &__icon{
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                }
+
+                h2 , p{
+                    text-align:left;
+                }
+                p{
+                    font-size:.9rem;
+                }
+            }
+    
+        }
+    }
+}
+
+
+@media (min-width:1100px){
+    main{
+        
+        .about{
+            width:60em;
+        }
+    }
+}

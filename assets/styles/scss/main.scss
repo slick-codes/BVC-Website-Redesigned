@@ -8,7 +8,7 @@
     padding: 1em 2em;
     display: flex;
     align-items: center;
-    box-shadow: 1px 2px 20px 0px #ededed;
+    box-shadow: 1px 2px 3px 0px #ededed;
     position: sticky;
     top: 0em;
 
@@ -193,6 +193,7 @@
             position: absolute;
             background:#08080826;
             z-index: -1;
+            backdrop-filter:blur(2px);
         }
     }
 
