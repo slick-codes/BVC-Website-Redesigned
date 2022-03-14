@@ -263,6 +263,7 @@
             transform: translateY(0);
             transition: 0;
             overflow-y: initial;
+            backdrop-filter: blur(0);
 
             label {
                 padding: initial;
