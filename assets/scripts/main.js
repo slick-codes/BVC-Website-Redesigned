@@ -46,8 +46,28 @@ navLinks.forEach((navItem, index) => {
 
 })
 
+
+
+
+const mainContainer = document.querySelector('main')
+
+function solidNavigationEffect(event){
+    const mainRect = mainContainer.getBoundingClientRect().top
+    const calc = mainRect - navigation.clientHeight
+    
+    if( calc <= 0)
+        return navigation.classList.remove('transparent')
+    
+        navigation.classList.add('transparent')
+}
+
+
+window.onscroll = solidNavigationEffect
+
 window.onload = function () {
     fixLogo()
-    window.onload = () => fixLogo
+    solidNavigationEffect()
 }
+
+
 

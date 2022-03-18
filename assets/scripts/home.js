@@ -1,0 +1,30 @@
+const slideImageArray = ['slide1.jpg' , 'slide2.jpg' ,'slide3.jpg', 'slide4.jpg' ,'slide5.jpg' ,'slide6.jpg','slide7.jpg','slide8.jpg']
+
+const generateSlideNodes = function(){
+    const firstSlide = null 
+
+    slideImageArray.forEach( (slide, index) => {
+        const slideDiv = document.createElement('div')
+        slideDiv.style.backgroundImage = `url(assets/images/slides/${slide})`
+    
+        if( index > 0)
+            slideDiv.classList.add('hide')
+
+        slideDiv.classList.add('slide')
+        document.querySelector('header').appendChild(slideDiv)
+    })
+}
+
+generateSlideNodes()
+
+let index = 1;
+
+setInterval( function(){
+    const slides = document.querySelectorAll('header .slide')
+    if(index >= slides.length)
+        index = 0
+    
+    slides.forEach(slide => slide.classList.add('hide') )
+    slides[index].classList.remove('hide')
+    index++
+}, 6000)
