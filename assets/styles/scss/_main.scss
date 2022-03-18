@@ -5,17 +5,24 @@
 // Starting of Navigation
 .nav {
     background: white;
-    padding: 1em 2em;
+    padding: 1em 0em;
     display: flex;
     align-items: center;
-    box-shadow: 1px 2px 3px 0px #ededed;
+    box-shadow: 1px 2px 20px 0px #0000000a;
     position: sticky;
     top: 0em;
+    justify-content: center;
+    flex-flow: column;
+    z-index:40;
 
-
-    // &__logo-section{
-
-    // }
+    &__outer-container {
+        // background: blue;
+        width: 84%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
 
     & section:last-child {
         margin-left: auto;
@@ -31,10 +38,8 @@
     }
 
     &__container {
-        display: flex;
         margin-left: auto;
-        // justify-content: center;
-        align-items: center;
+        // background:red;
     }
 
     &__link-container {
@@ -48,28 +53,24 @@
         width: 80%;
         justify-content: flex-start;
         padding-top: 3em;
-        transform: translateX(-100%);
+        transform: translateX(-120%);
         transition: .1s;
-        box-shadow:7px 0px 20px 4px #0000001c;
+        box-shadow: 7px 0px 20px 4px #0000001c;
         backdrop-filter: blur(20px);
         z-index: 4;
         overflow-y: auto;
         padding-bottom: 2em;
 
 
-
-
-
         >label {
             padding: 1em 0;
-
             // position:relative;
+
             &#visit {
-                // border-bottom: solid 3px $base-blue;
-                border: none !important;
+                border: none;
 
                 a {
-                    color: $base-blue;
+                    color: black;
                 }
             }
 
@@ -107,7 +108,7 @@
                         a {
                             font-family: $basefont-regular;
                             text-transform: initial;
-                            color:$base-blue;
+                            // color: $base-blue;
 
                             &:hover {
                                 color: $hover-color;
@@ -191,9 +192,9 @@
             height: 100vh;
             width: 100%;
             position: absolute;
-            background:#08080826;
+            // background: #08080826;
             z-index: -1;
-            backdrop-filter:blur(2px);
+            backdrop-filter: blur(2px);
         }
     }
 
@@ -237,6 +238,15 @@
         padding: 0em $side-padding;
         position: sticky;
         top: 0;
+        // background:white;
+        transition:.3s;
+        
+        &.transparent{
+            background:#ffffffa6;
+            backdrop-filter: blur(10px);
+        }
+
+        // &__container {}
 
 
         &__menu {
@@ -266,17 +276,28 @@
             overflow-y: initial;
             backdrop-filter: blur(0);
 
-            label {
+            // > label#visit{
+            //     border:solid 2px black;
+            //     background-color:yellow;
+            // }
+
+            >label {
                 padding: initial;
-                padding: 1.4em .7em;
+                padding: 1.4em 1em;
                 width: inherit;
                 display: initial;
-                // background:blue;
+
+                &#visit {
+                    border-bottom: solid 3px $base-blue;
+                    border-top: solid 3px transparent;
+                }
+
 
                 a {
                     display: inline;
                     padding: 1em 0;
                     color: $dark-gray;
+                    // color:white;
 
                     &:hover {
                         color: black;
@@ -299,23 +320,11 @@
                     opacity: 0;
                     transition: .2s;
 
-                    // &::before{
-                    //     content:"";
-                    //     display:block;
-                    //     height:100%;
-                    //     width:100%;
-                    //     top:0;
-                    //     left:0;
-                    //     z-index:-1;
-                    //     position:absolute;
-                    //     // background:rgba(255, 255, 255, 0.926);
-                    //     backdrop-filter: blur(4px);
-                    // }
+                    a {
+                        color: black;
+                    }
 
 
-                
-
-                    
 
 
                     &__list {
@@ -341,10 +350,10 @@
                         right: 0;
                         padding: 1em 3em;
                         padding-bottom: 2em;
-                        
 
-                       
-    
+
+
+
                         .course__card {
 
                             &:last-child {
@@ -357,7 +366,7 @@
                                 line-height: 1.5rem;
                                 padding: 0 !important;
                                 padding-bottom: .4em;
-                                color: $base-blue;
+                                // color: $base-blue;
                             }
 
 
@@ -405,6 +414,15 @@
             width: 9em;
         }
 
+    }
+}
+
+@media (min-width: 1100px) {
+    .nav {
+
+        &__outer-container {
+            width: 65em;
+        }
     }
 }
 
