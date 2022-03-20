@@ -232,6 +232,7 @@ main {
                 transform-origin: top;
                 transition: .5s;
                 transform: scale(1.01);
+                // filter:brightness(1.4) saturate(1.1);
             }
 
             &:hover img {
@@ -242,16 +243,16 @@ main {
         &__info {
             position: absolute;
             // padding:4em;
-            top: 0;
-            height: 100%;
-            background: rgba(2, 2, 2, 0.179);
+            height: 9em;
+            background: rgba(2, 2, 2, 0.405);
             display: flex;
             // justify-content: center;
             align-items: center;
             flex-flow: column;
             width: 100%;
             // padding-left:1em;
-            padding-top: 13em;
+            bottom:0;
+            // padding-top: 13em;
 
 
             h2,
