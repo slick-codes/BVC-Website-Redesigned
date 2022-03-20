@@ -1,0 +1,25 @@
+{
+  "name": "bvc",
+  "version": "1.0.0",
+  "description": "> install visual studio codes",
+  "main": "index.js",
+  "scripts": {
+    "start":"",
+    "build-sass": "node-sass assets/styles/scss/ assets/styles/css/",
+    "watch-sass": "node-sass -w assets/styles/scss/ assets/styles/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slick-codes/BVC-Website-Redesigned.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slick-codes/BVC-Website-Redesigned/issues"
+  },
+  "homepage": "https://github.com/slick-codes/BVC-Website-Redesigned#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
