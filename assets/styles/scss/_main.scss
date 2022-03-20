@@ -342,8 +342,18 @@
 
                 a {
                     color: white;
+                    font-size: 1.1rem;
+                }
+
+                &:nth-child(2) {
+                    background: #128c9d;
+                }
+
+                &:last-child{
+                    background:#D60E00
                 }
             }
+
         }
     }
 
