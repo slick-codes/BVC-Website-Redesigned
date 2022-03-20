@@ -13,7 +13,7 @@
     top: 0em;
     justify-content: center;
     flex-flow: column;
-    z-index:40;
+    z-index: 40;
 
     &__outer-container {
         // background: blue;
@@ -55,7 +55,7 @@
         padding-top: 3em;
         transform: translateX(-120%);
         transition: .3s;
-        transition-timing-function:cubic-bezier(0, 1.33, 0.65, 1.1);
+        transition-timing-function: cubic-bezier(0, 1.33, 0.65, 1.1);
         box-shadow: 7px 0px 20px 4px #0000001c;
         backdrop-filter: blur(20px);
         z-index: 4;
@@ -89,7 +89,7 @@
                 // background-color:blue;
                 height: 100%;
                 transition: .3s;
-                transition-timing-function:linear;
+                transition-timing-function: linear;
             }
 
 
@@ -229,6 +229,181 @@
 
 }
 
+.up__button {
+    height: 2em;
+    width: 2em;
+    background: $base-blue;
+    color: white;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: hovering;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate-reverse;
+    opacity: 0;
+    transition: .3s;
+    pointer-events: none;
+    will-change: opacity, transform;
+
+    &.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@keyframes hovering {
+    from {
+        transform: translateY(0em);
+    }
+
+    to {
+        transform: translateY(.5em);
+    }
+}
+
+// Footer Section Mobile , Default
+.footer {
+    border-top: solid 1px rgba(255, 255, 255, 0.241);
+    padding: 4em 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    font-family: $basefont-regular;
+    background: rgba(0, 0, 0, 0.823);
+    background: $trans-blue;
+    backdrop-filter: blur(4px);
+
+    &__container {
+        display: grid;
+        margin: 0 auto;
+        width: 100%;
+
+        >section:not(:first-child) {
+            padding-top: 2em;
+        }
+    }
+
+
+    section {
+        h1 {
+            font-size: 1.3rem;
+            color: rgb(255, 255, 255);
+        }
+
+    }
+
+    &__link {
+        padding-top: .5em;
+
+        label {
+            padding: 0em 0;
+            display: block;
+
+            a {
+                // color: $base-blue;
+                color: rgb(228, 228, 228);
+                font-size: .9rem;
+
+
+                &:hover {
+                    color: white;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__socialmedia {
+
+        .footer__link {
+            display: flex;
+            padding-top: 1em;
+
+            label {
+                height: 3em;
+                border-radius: 50em;
+                width: 3em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: blue;
+
+                &:not(:first-child) {
+                    margin-left: .5em;
+                }
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media (min-width:700px) {
+    .footer {
+        display: grid;
+        padding: inherit 2em;
+        padding-bottom: 5em;
+
+        &__container {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1em;
+            grid-row-gap: 3em;
+
+            >section:not(:first-child) {
+                padding-top: 0;
+            }
+        }
+
+    }
+
+}
+
+
+@media (min-width:1000px) {
+    .footer {
+        display: grid;
+        padding: inherit 2em;
+        padding-bottom: 10em;
+
+        section {
+            padding: 0px 1em;
+            display: flex;
+            // justify-content:center;
+            align-items: center;
+            flex-flow: column;
+        }
+
+
+        &__container {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            width: initial;
+            max-width: 85em;
+
+
+            >section:not(:first-child) {
+                padding-top: 0;
+            }
+        }
+
+    }
+
+}
+
+
 @media (max-width:300px) {
     .course__image-container {
         width: 100% !important;
@@ -241,10 +416,10 @@
         position: sticky;
         top: 0;
         // background:white;
-        transition:.3s;
-        
-        &.transparent{
-            background:#ffffffa6;
+        transition: .3s;
+
+        &.transparent {
+            background: #ffffffa6;
             backdrop-filter: blur(10px);
         }
 

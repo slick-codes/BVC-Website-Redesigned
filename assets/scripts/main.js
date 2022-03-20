@@ -54,11 +54,15 @@ const mainContainer = document.querySelector('main')
 function solidNavigationEffect(event){
     const mainRect = mainContainer.getBoundingClientRect().top
     const calc = mainRect - navigation.clientHeight
+    const scrollUpButton = document.querySelector('.up__button')
     
-    if( calc <= 0)
-        return navigation.classList.remove('transparent')
-    
+    if( calc <= 0){
+        navigation.classList.remove('transparent')
+        scrollUpButton.classList.add('show')
+        return
+    }
         navigation.classList.add('transparent')
+        scrollUpButton.classList.remove('show')
 }
 
 
