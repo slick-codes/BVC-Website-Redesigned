@@ -4,9 +4,8 @@
   "description": "> install visual studio codes",
   "main": "index.js",
   "scripts": {
-    "start":"",
-    "build-sass": "node-sass assets/styles/scss/ assets/styles/css/",
-    "watch-sass": "node-sass -w assets/styles/scss/ assets/styles/css/"
+    "build-sass": "node-sass assets/styles/scss/ -o assets/styles/css/",
+    "watch-sass": "node-sass -w assets/styles/scss/ -o assets/styles/css/"
   },
   "repository": {
     "type": "git",
