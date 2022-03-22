@@ -5,6 +5,7 @@ const generateSlideNodes = function(){
 
     slideImageArray.forEach( (slide, index) => {
         const slideDiv = document.createElement('div')
+        slideDiv.setAttribute("loading", "lazy")
         slideDiv.style.backgroundImage = `url(assets/images/slides/${slide})`
     
         if( index > 0)
