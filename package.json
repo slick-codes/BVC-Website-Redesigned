@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build-sass",
-    "dev": "npm run node-sass && live-server",
+    "dev": "npm run build-sass && live-server",
     "build-sass": "node-sass assets/styles/scss/ -o assets/styles/css/",
     "watch-sass": "node-sass -w assets/styles/scss/ -o assets/styles/css/"
   },
