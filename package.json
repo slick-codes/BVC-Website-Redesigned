@@ -4,6 +4,8 @@
   "description": "> install visual studio codes",
   "main": "index.js",
   "scripts": {
+    "start": "npm run build-sass",
+    "dev": "npm run node-sass && live-server",
     "build-sass": "node-sass assets/styles/scss/ -o assets/styles/css/",
     "watch-sass": "node-sass -w assets/styles/scss/ -o assets/styles/css/"
   },
@@ -20,5 +22,8 @@
   "homepage": "https://github.com/slick-codes/BVC-Website-Redesigned#readme",
   "dependencies": {
     "node-sass": "^7.0.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
   }
 }
