@@ -1,21 +1,14 @@
-# Setup
+# Installation
 
-## Step 1
-> install visual studio codes
 
-## Step 2
-> install the Sass compiler extension 
+Install nodejs from [nodejs.org](https://nodejs.org)
+Open your terminal and type the following in the project directory 
+ ```
+  npm install 
+```
 
-## Step 3
-> Open the settings.json and insert the following code
- ```json 
-    {
-    "liveSassCompile.settings.formats": [
-        {
-            "format": "expanded",
-            "extensionName": ".css",
-            "savePath": "/assets/styles/css"
-        }
-    ]
-}
+# Building
+Open your terminal in the project directory and type the following code 
+```
+npm run build-sass
 ```
