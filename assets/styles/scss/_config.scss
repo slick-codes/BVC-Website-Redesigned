@@ -20,7 +20,8 @@
 
 @font-face{
     font-family: titillium semibold;
-    src: url("../../resources/fonts/TitilliumWeb-SemiBold.ttf")
+    src: url("../../resources/fonts/TitilliumWeb-SemiBold.ttf");
+    font-display: arial;
 }
 @font-face{
     font-family: titillium regular;
@@ -30,11 +31,13 @@
 @font-face{
     font-family: titillium bold;
     src: url('../../resources/fonts/TitilliumWeb-Bold.ttf');
+    font-display: arial;
 }
 
 @font-face{
     font-family: titillium black;
     src: url('../../resources/fonts/TitilliumWeb-Black.ttf');
+    font-display:arial;
 }
 
 $gray: #bfc1c5;
