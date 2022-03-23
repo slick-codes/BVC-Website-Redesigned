@@ -1,9 +1,9 @@
 const navigation = document.querySelector('nav.nav')
 const navToggleButton = document.querySelector('.nav__menu')
 const navLogo = document.querySelector('.nav__logo')
-const navDesktopViewScreen = 1000
 const navLinks = document.querySelectorAll('label.dropdown__link')
 const navSlider = document.querySelector('.nav__link-container')
+const navDesktopViewScreen = 1000
 
 
 console.log(navLinks)
