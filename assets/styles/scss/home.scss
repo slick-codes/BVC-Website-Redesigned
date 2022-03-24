@@ -242,18 +242,25 @@ main {
 
         &__info {
             position: absolute;
-            // padding:4em;
             height: 9em;
             background: rgba(2, 2, 2, 0.405);
             display: flex;
-            // justify-content: center;
             align-items: center;
             flex-flow: column;
             width: 100%;
-            // padding-left:1em;
             bottom:0;
-            // padding-top: 13em;
+            // position:relative;
 
+            // &:before{
+            //     content:"";
+            //     display:block;
+            //     position:absolute;
+            //     bottom:0;
+            //     left:0;
+            //     padding:.5em 0; 
+            //     background:rgb(240, 240, 240);
+            //     width:100%;
+            // }
 
             h2,
             h3 {
