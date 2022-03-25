@@ -570,6 +570,10 @@
                                 label {
                                     padding: .1em 0;
                                     border: none;
+
+                                    a{
+                                        font-family:$basefont-regular;
+                                    }
                                 }
                             }
                         }
