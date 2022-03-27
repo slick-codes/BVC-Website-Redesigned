@@ -232,7 +232,7 @@ main {
                 transform-origin: top;
                 transition: .5s;
                 transform: scale(1.01);
-                // filter:brightness(1.4) saturate(1.1);
+                filter:brightness(1.2) contrast(1); 
             }
 
             &:hover img {
@@ -243,12 +243,14 @@ main {
         &__info {
             position: absolute;
             height: 9em;
-            background: rgba(2, 2, 2, 0.405);
+            background: rgba(19, 27, 248, 0.309);
             display: flex;
             align-items: center;
             flex-flow: column;
             width: 100%;
+            backdrop-filter: blur(2px);
             bottom:0;
+            color:white;
             // position:relative;
 
             // &:before{
