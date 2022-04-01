@@ -16,16 +16,16 @@ const generateSlideNodes = function(){
     })
 }
 
-// generateSlideNodes()
+generateSlideNodes()
 
 let index = 1;
 
-// setInterval( function(){
-//     const slides = document.querySelectorAll('header .slide')
-//     if(index >= slides.length)
-//         index = 0
+setInterval( function(){
+    const slides = document.querySelectorAll('header .slide')
+    if(index >= slides.length)
+        index = 0
     
-//     slides.forEach(slide => slide.classList.add('hide') )
-//     slides[index].classList.remove('hide')
-//     index++
-// }, 6000)
+    slides.forEach(slide => slide.classList.add('hide') )
+    slides[index].classList.remove('hide')
+    index++
+}, 6000)
