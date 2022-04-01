@@ -11,11 +11,11 @@ header {
     background-position: right;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100%;
+    // width: 100%;
     background-blend-mode: overlay;
-    position: fixed;
-    top: 0;
-    z-index: -1;
+    position: relative;
+    // top: 0;
+    // z-index: -1;
     // position:relative;
     overflow: hidden;
 
@@ -51,7 +51,7 @@ main {
     justify-content: center;
     align-items: center;
     // background: white;
-    margin-top: 25em !important; // size based on the headers height
+    // margin-top: 25em !important; // size based on the headers height
     // padding: 3em 0;
     // padding-bottom: 5em;
     // display: none;
@@ -444,7 +444,7 @@ main {
     }
 
     main {
-        margin-top: 100vh !important;
+        // margin-top: 100vh !important;
         // padding-top: 3em;
         // padding-bottom: 3em;
 
