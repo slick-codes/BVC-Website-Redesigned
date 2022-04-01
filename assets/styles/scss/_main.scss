@@ -1,5 +1,5 @@
 @import 'config';
-// @import url('.. /../resources/fontawesome-free-6.0.0-web/css/all.css');
+@import url('../../resources/fontawesome-free-6.0.0-web/css/all.min.css');
 
 
 // Starting of Navigation
@@ -64,9 +64,23 @@
 
 
         >label {
-            padding: 1em 0;
-            // position:relative;
 
+
+            
+            &.link{
+                padding:1em 0;
+                border:solid 1px #b6b6b6;
+                border-left:none;
+                border-right:none;
+            }
+
+            > label.link{
+                padding:1em 0;
+                border:solid 1px #b6b6b6;
+                display: block;
+            }
+
+            
             &#visit {
                 border: none;
 
@@ -85,17 +99,20 @@
                 // background:blue;
             }
 
-            .dropdown.show {
+            .dropdown.hide {
                 // background-color:blue;
-                height: 100%;
-                transition: .3s;
-                transition-timing-function: linear;
+                height:0;
+                padding:0;
             }
-
-
+            
+            
             .dropdown {
-                height: 0;
+                transition: .3s;
                 overflow: hidden;
+                transition-timing-function: linear;
+                background:$dark-blue;
+                padding:1.5em 0;
+
 
                 &__list {
                     padding-right: .4em;
@@ -103,14 +120,15 @@
                     label {
                         width: 100%;
                         padding: .2em .4em;
-                        padding-left: .4em;
+                        padding-left:0;
                         display: block;
 
 
                         a {
                             font-family: $basefont-regular;
-                            text-transform: initial;
-                            // color: $base-blue;
+                            text-transform: initial;                                color:rgb(221, 221, 221);
+                            color:rgb(221, 221, 221);
+
 
                             &:hover {
                                 color: $hover-color;
@@ -124,14 +142,16 @@
                 }
 
                 &.course {
-                    padding-left: 2.3em;
-                    padding-top: .4em;
+                    padding-left: 1.7em;
+                    
+                    // padding-top: .4em;
 
                     h2 {
                         font-size: 18px;
                         padding-top: .1em;
                         padding-right: .4em;
                         font-family: $basefont-regular;
+                        color:white;
                     }
 
                     &>section:last-child h2 {
@@ -470,10 +490,21 @@
             // }
 
             >label {
-                padding: initial;
-                padding: 1.4em 1em;
-                width: inherit;
-                display: initial;
+                
+                
+                &.link{
+                    padding: initial;
+                    padding: 1.4em 1em;
+                    width: inherit;
+                    display: initial;
+                    border:none;
+                }
+
+                > label.link{
+                    padding:1.4em 1em;
+                    border:none;
+                    // display:initial;
+                }
 
                 &#visit {
                     border-bottom: solid 3px $base-blue;
@@ -502,26 +533,31 @@
                     flex-flow: column;
                     font-weight: 0;
                     height: initial;
+                    padding:0;
+                    border-radius:.3em;
+                    // border-top:solid 3px $base-blue;
 
 
-                    transform: translateY(3em);
+                    transform: translateY(6em);
                     opacity: 0;
                     transition: .2s;
 
-                    a {
-                        color: black;
-                    }
-
-
-
-
+                    
+                    
+                    
+                    
                     &__list {
-
+                        
                         label {
                             font-size: 9px;
                             padding: .7em 1em;
-                        }
 
+                            
+                            a {
+                                color: black;
+                            }
+                        }
+                        
                         &.aboutus__dropdown {
                             min-width: 40%;
                         }
@@ -538,7 +574,10 @@
                         right: 0;
                         padding: 1em 3em;
                         padding-bottom: 2em;
-
+                        
+                        h2{
+                            color:black;
+                        }
 
 
 
@@ -586,7 +625,7 @@
                 &:hover {
 
                     & .dropdown {
-                        transform: translateY(1.3em);
+                        transform: translateY(.4em);
                         opacity: 1;
                         pointer-events: auto;
                     }
