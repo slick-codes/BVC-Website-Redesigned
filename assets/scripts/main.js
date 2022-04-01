@@ -11,6 +11,7 @@ function resetMenu(node) {
 }
 
 navToggleButton.onclick = function (event) {
+	event.preventDefault()
 	if (navigation.classList.contains("active"))
 		navigation.ontransitionend = () => {
 			document.querySelectorAll("nav .dropdown").forEach((dropdown) => {
