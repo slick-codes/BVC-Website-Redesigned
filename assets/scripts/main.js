@@ -11,7 +11,6 @@ function resetMenu(node) {
 }
 
 navToggleButton.onclick = function (event) {
-	event.preventDefault()
 	if (navigation.classList.contains("active"))
 		navigation.ontransitionend = () => {
 			document.querySelectorAll("nav .dropdown").forEach((dropdown) => {
@@ -65,7 +64,8 @@ const dropdownHeightUpdater = function () {
 		dropdown.classList.add("hide");
 
 		dropdownCont.querySelector(".link").onclick = function (event) {
-
+			event.preventDefault();
+			
 			if (dropdown.classList.contains("hide")) {
 				dropdown.style.height = dropdownHeight + "px";
 			} else {
