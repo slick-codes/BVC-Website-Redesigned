@@ -16,7 +16,7 @@ const generateSlideNodes = function(){
     })
 }
 
-generateSlideNodes()
+// generateSlideNodes()
 
 let index = 1;
 
