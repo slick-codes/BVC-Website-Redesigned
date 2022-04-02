@@ -5,66 +5,163 @@ main {
     // margin-top:15em;
 
     .background {
-        width:100%;
+        width: 100%;
         background-image: url("./../../images/slides/slide1.jpg");
         background-size: cover;
         background-blend-mode: multiply;
-        position:fixed;
-        height:100vh;
+        position: fixed;
+        height: 100vh;
         z-index: -1;
-        top:0;
+        top: 0;
     }
-    
-    header{
-        height:12em;
-        width:100%;
-        background-color: #17087980;
-        background-blend-mode:multiply;
-        background-image: url("./../../images/slides/slide1.jpg");
-        background-size:cover;
-        background-repeat:repeat-x;
-        display:flex;
-        align-items:center;
 
-        h1{
-            color:white;
+    header {
+        height: 12em;
+        width: 100%;
+        background-color: #17087980;
+        background-blend-mode: multiply;
+        background-image: url("./../../images/slides/slide1.jpg");
+        background-size: cover;
+        background-repeat: repeat-x;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            color: white;
             font-family: $basefont-bold;
             // padding-left:.5em;
-            text-align:center;
-            text-transform:uppercase;
-            width:100%;
+            text-align: center;
+            text-transform: uppercase;
+            width: 100%;
         }
 
     }
 
-    .about{
-        background:white;
-        padding:23em 0;
-        padding-top:2em;
-        display:flex;
-        flex-flow:column;
+    .about {
+        background: white;
+        padding: 2em 0;
+        display: flex;
+        flex-flow: column;
         justify-content: center;
-        align-items:center;
+        align-items: center;
 
-        &__container{
-            width:85%;
-            display:grid;
-            grid-template-columns: 1fr ;
-            justify-content:center;
-            align-items:center;
-            grid-gap:1em;
-            text-align:justify;
+        &__container {
+            width: 85%;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 1em;
+            // text-align: justify;
 
-            img{
-                width:100%;
+            img {
+                width: 100%;
+                border-radius:.3em;
             }
 
-            p, h1{
+            p,
+            h1 {
                 font-family: $basefont-regular;
             }
-            p{
+
+            p {
                 font-size: .9rem;
-                padding:.4em 0;
+                padding: .4em 0;
+            }
+        }
+    }
+
+    .mission {
+        background: #170879d2;
+        width: 100%;
+        padding: 3em 0;
+        // padding-top: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-.1em);
+
+        &__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column-reverse;
+            width: 90%;
+
+            .para {
+                >div {
+                    padding: 1em 0;
+
+                    p,
+                    h1 {
+                        font-size: .9rem;
+                        font-family: $basefont-regular;
+                        color:white;
+                    }
+
+                    h1 {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            .mission__image {
+                
+
+                img {
+                    width: 100%;
+                    border:solid 5px white;
+                    border-radius:.3em;
+                }
+            }
+        }
+
+    }
+    .strategy{
+        padding:20em;
+        background:white;
+    }
+}
+
+
+@media (min-width:1000px) {
+    main {
+
+        header {
+            h1 {
+                font-size: 3rem;
+                // text-transform: capitalize;
+            }
+        }
+
+        .about {
+
+            &__container {
+                grid-template-columns: 1fr 1fr;
+                width: 80%;
+
+            }
+        }
+
+        .mission {
+
+            &__container {
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                flex-flow: row;
+                width:77%;
+                grid-gap:1em;
+            }
+        }
+    }
+}
+
+@media (min-width: 1100px) {
+    main {
+        .about {
+
+            &__container {
+                width: 65em;
             }
         }
     }
