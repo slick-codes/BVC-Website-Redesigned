@@ -23,11 +23,49 @@ main {
         background-image: url("./../../images/slides/slide1.jpg");
         background-size:cover;
         background-repeat:repeat-x;
+        display:flex;
+        align-items:center;
+
+        h1{
+            color:white;
+            font-family: $basefont-bold;
+            // padding-left:.5em;
+            text-align:center;
+            text-transform:uppercase;
+            width:100%;
+        }
 
     }
 
     .about{
         background:white;
         padding:23em 0;
+        padding-top:2em;
+        display:flex;
+        flex-flow:column;
+        justify-content: center;
+        align-items:center;
+
+        &__container{
+            width:85%;
+            display:grid;
+            grid-template-columns: 1fr ;
+            justify-content:center;
+            align-items:center;
+            grid-gap:1em;
+            text-align:justify;
+
+            img{
+                width:100%;
+            }
+
+            p, h1{
+                font-family: $basefont-regular;
+            }
+            p{
+                font-size: .9rem;
+                padding:.4em 0;
+            }
+        }
     }
 }
