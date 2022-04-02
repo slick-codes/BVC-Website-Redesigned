@@ -9,17 +9,17 @@ main {
         background-image: url("./../../images/slides/slide1.jpg");
         background-size: cover;
         background-blend-mode: multiply;
-        background-color: #17087980;
         position:fixed;
         height:100vh;
         z-index: -1;
         top:0;
     }
-
+    
     header{
         height:12em;
         width:100%;
-        background:blue;
+        background-color: #17087980;
+        background-blend-mode:multiply;
         background-image: url("./../../images/slides/slide1.jpg");
         background-size:cover;
         background-repeat:repeat-x;
