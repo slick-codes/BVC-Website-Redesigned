@@ -5,14 +5,15 @@ main {
     // margin-top:15em;
 
     .background {
-        width: 100%;
         background-image: url("./../../images/slides/slide1.jpg");
         background-size: cover;
         background-blend-mode: multiply;
+        width: 100%;
         position: fixed;
         height: 100vh;
         z-index: -1;
         top: 0;
+        left:0;
     }
 
     header {
@@ -118,7 +119,7 @@ main {
 
     }
     .strategy{
-        padding:20em;
+        padding:20em 0;
         background:white;
     }
 }
