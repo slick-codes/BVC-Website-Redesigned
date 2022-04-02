@@ -66,21 +66,23 @@
         >label {
 
 
-            
-            &.link{
-                padding:1em 0;
-                border-top:solid 1px #b6b6b6b1;
-                border-left:none;
-                border-right:none;
+
+            &.link {
+                padding: 1em 0;
+                border-top: solid 1px #b6b6b6b1;
+                border-left: none;
+                border-right: none;
+
             }
 
-            > label.link{
-                padding:1em 0;
-                border-top:solid 1px #b6b6b6b1;
+            >label.link {
+                padding: 1em 0;
+                border-top: solid 1px #b6b6b6b1;
                 display: block;
+
             }
 
-            
+
             &#visit {
                 border: none;
 
@@ -101,17 +103,17 @@
 
             .dropdown.hide {
                 // background-color:blue;
-                height:0;
-                padding:0;
+                height: 0;
+                padding: 0;
             }
-            
-            
+
+
             .dropdown {
                 transition: .1s;
                 overflow: hidden;
                 transition-timing-function: linear;
-                background:$dark-blue;
-                padding:1.5em 0;
+                background: $dark-blue;
+                padding: 1.5em 0;
 
 
                 &__list {
@@ -120,14 +122,15 @@
                     label {
                         width: 100%;
                         padding: .2em .4em;
-                        padding-left:0;
+                        padding-left: 0;
                         display: block;
 
 
                         a {
                             font-family: $basefont-regular;
-                            text-transform: initial;                                color:rgb(221, 221, 221);
-                            color:rgb(221, 221, 221);
+                            text-transform: initial;
+                            color: rgb(221, 221, 221);
+                            color: rgb(221, 221, 221);
 
 
                             &:hover {
@@ -143,7 +146,7 @@
 
                 &.course {
                     padding-left: 1.7em;
-                    
+
                     // padding-top: .4em;
 
                     h2 {
@@ -151,7 +154,7 @@
                         padding-top: .1em;
                         padding-right: .4em;
                         font-family: $basefont-regular;
-                        color:white;
+                        color: white;
                     }
 
                     &>section:last-child h2 {
@@ -370,8 +373,8 @@
                     background: #128c9d;
                 }
 
-                &:last-child{
-                    background:#D60E00
+                &:last-child {
+                    background: #D60E00
                 }
             }
 
@@ -484,32 +487,36 @@
             overflow-y: initial;
             // backdrop-filter: blur(0);
 
-            // > label#visit{
-            //     border:solid 2px black;
-            //     background-color:yellow;
-            // }
 
             >label {
-                
-                
-                &.link{
+
+
+                &.link {
                     padding: initial;
                     padding: 1.4em 1em;
                     width: inherit;
                     display: initial;
-                    border:none;
+                    border: none;
+                    // border-bottom: solid 3px transparent;
+                    // border-top: solid 3px transparent;
+
+                    &#visit,
+                    &>label#visit {
+                        border-bottom: solid 3px $base-blue;
+                    }
                 }
 
-                > label.link{
-                    padding:1.4em 1em;
-                    border:none;
+                >label.link {
+                    padding: 1.4em 1em;
+                    border: none;
+                    border-bottom:solid 3px transparent;
                     // display:initial;
+
+                    &#visit {
+                        border-bottom: solid 3px $base-blue;
+                    }
                 }
 
-                &#visit {
-                    border-bottom: solid 3px $base-blue;
-                    border-top: solid 3px transparent;
-                }
 
 
                 a {
@@ -525,7 +532,7 @@
 
                 .dropdown {
                     position: absolute;
-                    background: rgb(255, 255, 255) !important;
+                    background: rgba(255, 255, 255, 0.939) !important;
                     // backdrop-filter: blur(76px) ;
                     box-shadow: 0px 4px 6px 0px #0000002b;
                     pointer-events: none;
@@ -533,8 +540,10 @@
                     flex-flow: column;
                     font-weight: 0;
                     height: initial;
-                    padding:0;
-                    border-radius:.3em;
+                    padding: 0;
+                    border-radius: .3em;
+                    border-top-left-radius:0;
+                    border-top-right-radius:0;
                     // border-top:solid 3px $base-blue;
 
 
@@ -542,22 +551,22 @@
                     opacity: 0;
                     transition: .2s;
 
-                    
-                    
-                    
-                    
+
+
+
+
                     &__list {
-                        
+
                         label {
                             font-size: 9px;
                             padding: .7em 1em;
 
-                            
+
                             a {
                                 color: black;
                             }
                         }
-                        
+
                         &.aboutus__dropdown {
                             min-width: 40%;
                         }
@@ -574,9 +583,9 @@
                         right: 0;
                         padding: 1em 3em;
                         padding-bottom: 2em;
-                        
-                        h2{
-                            color:black;
+
+                        h2 {
+                            color: black;
                         }
 
 
@@ -611,8 +620,8 @@
                                     padding: .1em 0;
                                     border: none;
 
-                                    a{
-                                        font-family:$basefont-regular;
+                                    a {
+                                        font-family: $basefont-regular;
                                     }
                                 }
                             }
@@ -625,7 +634,7 @@
                 &:hover {
 
                     & .dropdown {
-                        transform: translateY(.4em);
+                        transform: translateY(0em);
                         opacity: 1;
                         pointer-events: auto;
                     }
