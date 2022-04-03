@@ -130,7 +130,7 @@ main {
         &__container {
             display: flex;
             flex-flow: column;
-            width:95%;
+            // width:95%;
 
             .card {
                 display:flex;
@@ -144,10 +144,18 @@ main {
 
                 &__para {
                     // background-color: rgb(239, 239, 239);
-                    background: #eff1f3;
+                    background: #eff1f363;
                     padding: 1em 0;
                     padding-top:2em;
                     // min-height: 28em;
+                    display:flex;
+                    justify-content: center;
+                    align-items:center;
+                    padding:1em 1em;
+
+                    // .para__container{
+                    //     background:blue;
+                    // }
 
                     h1 {
                         color: $dark-blue;
@@ -156,8 +164,8 @@ main {
                         &:after {
                             content: "";
                             display: block;
-                            height: .2em;
-                            border-radius: .3em;
+                            height: .1em;
+                            // border-radius: .3em;
                             margin-top: .3em;
                             width: 5em;
                             background: $dark-blue;
@@ -169,7 +177,7 @@ main {
                         font-size: .9rem;
                         margin-top: 1em;
                         font-family: $basefont-regular;
-                        padding:1em;
+                        // padding:1em;
                     }
                 }
 
@@ -229,7 +237,7 @@ main {
             padding-top:3em;
 
             &__container{
-                width:80%;
+                width:75%;
 
                 .card{
                     display:grid !important;
@@ -238,7 +246,7 @@ main {
 
 
                     &__para{
-                        padding:1em;
+                        // padding:1em;
                         min-height:28em;
                     }
                 }
