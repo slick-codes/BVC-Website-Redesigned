@@ -259,7 +259,7 @@ main {
                     color: black;
                     font-size: .9rem;
                     font-family: $basefont-regular;
-                    text-align: justify;
+                    // text-align: justify;
                     padding:.5em .5em;
                     padding-top: 0;
                 }
@@ -297,11 +297,18 @@ main {
                         p {
                             text-align: center;
                         }
+
+                        h1{
+                            padding-top:.4em;
+                        }
                     }
 
                     img {
-                        width: 5em;
-                        height: 5em;
+                        width: 6em;
+                        height: 6em;
+                        border-radius:50em;
+                        // border:solid .5em white;
+                            outline: solid .3em white;
                     }
 
                 }
