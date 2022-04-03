@@ -248,11 +248,11 @@ main {
             .card {
                 // width:20em;
                 background: rgb(246, 246, 246);
-                padding: 1em .5em; 
+                padding: 1em .5em;
                 // border-radius: .3em;
-                
-                &:not(:first-child){
-                    margin-top:4em;
+
+                &:not(:first-child) {
+                    margin-top: 4em;
                 }
 
                 p {
@@ -260,7 +260,7 @@ main {
                     font-size: .9rem;
                     font-family: $basefont-regular;
                     // text-align: justify;
-                    padding:.5em .5em;
+                    padding: .5em .5em;
                     padding-top: 0;
                 }
 
@@ -298,17 +298,17 @@ main {
                             text-align: center;
                         }
 
-                        h1{
-                            padding-top:.4em;
+                        h1 {
+                            padding-top: .4em;
                         }
                     }
 
                     img {
                         width: 6em;
                         height: 6em;
-                        border-radius:50em;
+                        border-radius: 50em;
                         // border:solid .5em white;
-                            outline: solid .3em white;
+                        // outline: solid .3em white;
                     }
 
                 }
@@ -356,8 +356,8 @@ main {
                     // background-color: white;
                     margin-top: 0 !important;
 
-                    &:nth-child(2){
-                        transform:translateY(-2em) !important;
+                    &:nth-child(2) {
+                        transform: translateY(-2em) !important;
                     }
 
 
