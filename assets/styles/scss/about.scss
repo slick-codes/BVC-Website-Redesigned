@@ -3,6 +3,7 @@
 
 main {
     // margin-top:15em;
+    $header-fontsize: 1.7rem;
 
     .background {
         background-image: url("./../../images/slides/slide1.jpg");
@@ -30,6 +31,7 @@ main {
         h1 {
             color: white;
             font-family: $basefont-bold;
+            font-size: 2.5rem;
             // padding-left:.5em;
             text-align: center;
             text-transform: uppercase;
@@ -120,8 +122,7 @@ main {
     }
 
     .strategy {
-        // padding-top: 4em;
-        padding-bottom: 20em;
+        // padding-bottom: 1em;
         background: white;
         display: flex;
         justify-content: center;
@@ -133,25 +134,25 @@ main {
             // width:95%;
 
             .card {
-                display:flex;
-                flex-flow:column;
+                display: flex;
+                flex-flow: column;
                 // padding-bottom:2em;
 
-                &:last-child{
-                    flex-flow:column-reverse;
+                &:last-child {
+                    flex-flow: column-reverse;
                 }
-                
+
 
                 &__para {
                     // background-color: rgb(239, 239, 239);
                     background: #eff1f363;
                     padding: 1em 0;
-                    padding-top:2em;
+                    padding-top: 2em;
                     // min-height: 28em;
-                    display:flex;
+                    display: flex;
                     justify-content: center;
-                    align-items:center;
-                    padding:1em 1em;
+                    align-items: center;
+                    padding: 1em 1em;
 
                     // .para__container{
                     //     background:blue;
@@ -193,6 +194,48 @@ main {
         }
 
     }
+
+    .accreditation​ {
+        padding: 1em 0;
+        background-color: white;
+    }
+
+    .management {
+
+        header {
+            background-color: white;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1em 0;
+            background-color: #170879d2;
+            // background-image: url("./../../images/slides/slide1.jpg");
+            // background-blend-mode: multiply;
+            background-image:none;
+        }
+
+        h1,
+        p {
+            color: white;
+            font-family: $basefont-bold;
+        }
+
+        h1 {
+            font-size: $header-fontsize + 1rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: $basefont-regular;
+            font-size:1rem;
+        }
+
+        &__card-container{
+            padding:3em 0;
+            background:white;
+        }
+    }
 }
 
 
@@ -230,24 +273,24 @@ main {
 }
 
 
-@media (min-width:750px){
-    main{
-        
-        .strategy{
-            padding-top:3em;
+@media (min-width:750px) {
+    main {
 
-            &__container{
-                width:75%;
+        .strategy {
+            padding-top: 3em;
 
-                .card{
-                    display:grid !important;
+            &__container {
+                width: 75%;
+
+                .card {
+                    display: grid !important;
                     grid-template-columns: 1fr 1fr;
                     padding: 0;
 
 
-                    &__para{
+                    &__para {
                         // padding:1em;
-                        min-height:28em;
+                        min-height: 28em;
                     }
                 }
             }
