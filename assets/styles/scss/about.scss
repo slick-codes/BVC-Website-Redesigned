@@ -354,11 +354,13 @@ main {
 
 
                 .card {
+                    border-top:solid 3px $dark-blue;
                     // background-color: white;
                     margin-top: 0 !important;
 
                     &:nth-child(2) {
-                        transform: translateY(-2em) !important;
+                        // transform: translateY(-2em) !important;
+                        margin-top:-2em !important;
                     }
 
 

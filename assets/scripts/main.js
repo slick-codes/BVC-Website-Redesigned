@@ -1,3 +1,9 @@
+
+AOS.init();
+
+console.log(AOS)
+
+
 const navigation = document.querySelector("nav.nav");
 const navToggleButton = document.querySelector(".nav__menu");
 const navLogo = document.querySelector(".nav__logo");
