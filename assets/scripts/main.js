@@ -2,7 +2,11 @@
 AOS.init();
 
 console.log(AOS)
-
+//  fix mood for mobile
+document.querySelectorAll('[data-aos-delay]').forEach( element => {
+	if( window.innerWidth < navDesktopViewScreen)
+		element.setAttribute('data-aoe-delay' , 0)
+})
 
 const navigation = document.querySelector("nav.nav");
 const navToggleButton = document.querySelector(".nav__menu");
