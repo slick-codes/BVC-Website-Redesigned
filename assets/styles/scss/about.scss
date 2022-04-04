@@ -232,9 +232,10 @@ main {
         }
 
         &__card-container {
-            padding: 3em 0;
+                background: rgb(246, 246, 246);
+                padding: 3em 0;
             padding-top: 6em;
-            background: white;
+            // background: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -247,7 +248,7 @@ main {
 
             .card {
                 // width:20em;
-                background: rgb(246, 246, 246);
+                // background: rgb(246, 246, 246);
                 padding: 1em .5em;
                 // border-radius: .3em;
 
