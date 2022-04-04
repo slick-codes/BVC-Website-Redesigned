@@ -63,7 +63,7 @@ main {
             }
             iframe{
                 width:100%;
-                height:22em;
+                height:15em;
             }
 
             p,
@@ -327,6 +327,16 @@ main {
 
 @media (min-width:750px) {
     main {
+
+        .about{
+
+            &__container{
+
+                iframe{
+                    height:22em;
+                }
+            }
+        }
 
         .strategy {
             padding-top: 3em;
