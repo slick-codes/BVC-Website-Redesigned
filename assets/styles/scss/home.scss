@@ -315,75 +315,6 @@ main {
 
     }
 
-    // News Letter Section
-    .newsletter {
-        // background-color:#6a6a6a;
-        $width: 90%;
-
-        background: $trans-blue;
-        // backdrop-filter: blur(4px);
-        padding: 3em 0;
-        padding-bottom: 2em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow: column;
-
-        &__text {
-            text-align: center;
-            color: white;
-            font-weight: normal;
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
-
-            h1 {
-                font-family: $basefont-bold;
-                font-family: 1rem;
-                font-weight: normal;
-            }
-
-            p {
-                font-family: $basefont-regular;
-                padding: 0px 1.5em;
-                width: $width + 10;
-                text-align: center;
-            }
-
-        }
-
-        &__form {
-            padding: 1em 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: $width;
-
-            input,
-            button {
-                padding: 1em .5em;
-                font-family: $basefont-regular;
-                border: none;
-                width: 100%;
-            }
-
-            input {
-                padding: 1em 1em;
-                width: 100%;
-                border-top-left-radius:.3em;
-                border-bottom-left-radius:.3em;
-            }
-
-            button {
-                padding: 1em;
-                background: #ffb700;
-                max-width: 10em;
-                border-top-right-radius:.3em;
-                border-bottom-right-radius:.3em;
-            }
-        }
-    }
 
 }
 
@@ -414,24 +345,6 @@ main {
                 }
             }
 
-        }
-
-        .newsletter {
-            $width: 60%;
-
-            &__text {
-                p {
-                    width: $width;
-                }
-            }
-
-            &__form {
-                width: $width;
-
-                input {
-                    width: inherit;
-                }
-            }
         }
     }
 }
