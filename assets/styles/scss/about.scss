@@ -48,6 +48,10 @@ main {
         justify-content: center;
         align-items: center;
 
+        &__image-container{
+            height:100%;
+        }
+
         &__container {
             width: 85%;
             display: grid;
@@ -328,15 +332,7 @@ main {
 @media (min-width:750px) {
     main {
 
-        .about{
 
-            &__container{
-
-                iframe{
-                    height:22em;
-                }
-            }
-        }
 
         .strategy {
             padding-top: 3em;
@@ -406,7 +402,11 @@ main {
                 grid-template-columns: 1fr 1fr;
                 width: 80%;
 
+                iframe{
+                    height:100%;
+                }
             }
+            
         }
 
         .mission {
