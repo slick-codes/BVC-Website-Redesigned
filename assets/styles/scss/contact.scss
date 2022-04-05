@@ -84,12 +84,13 @@ main {
                 width: 100%;
 
                 div {
-                    padding: .5em 0;
+                    // padding: .5em 0;
+                    padding-bottom:.5em;
                 }
 
                 label {
-                    padding: .2em 0;
-                    padding-top: .5em;
+                    // padding: .2em 0;
+                    // padding-top: .5em;
                     font-family: $basefont-regular;
                     font-size: .9rem;
                     padding-left: .5em;
