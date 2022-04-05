@@ -52,7 +52,7 @@ function solidNavigationEffect(event) {
 
 const dropdownHeightUpdater = function () {
 
-	console.log('-------------------')
+	// console.log('-------------------')
 	const dropdownContainers = document.querySelectorAll(".dropdown__container");
 
 	dropdownContainers.forEach(function (dropdownCont, index) {
@@ -63,11 +63,11 @@ const dropdownHeightUpdater = function () {
 
 
 		const dropdownHeight = dropdown.clientHeight;
-		console.log("clientHeight", dropdownHeight);
+		// console.log("clientHeight", dropdownHeight);
 
-		dropdown.ontransitionend = function () {
-			console.log('srink')
-		}
+		// dropdown.ontransitionend = function () {
+		// 	console.log('srink')
+		// }
 		dropdown.classList.add("hide");
 
 		dropdownCont.querySelector(".link").onclick = function (event) {
