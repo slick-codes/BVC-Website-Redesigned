@@ -87,7 +87,7 @@
                         </section>
                     </label>
                     <label class="link"> <a href="#">News</a></label>
-                    <label class="link"  id="visit" > <a href="contact.html">Contact Us</a></label>
+                    <label class="link" id="visit"> <a href="contact.html">Contact Us</a></label>
                 </section>
                 <section class="nav__icon-container">
                     <div class="nav__menu hide">
@@ -98,15 +98,16 @@
         </section>
     </nav>
 
-    
+
     <a href="#" class="up__button show"><i class="fa fa-angle-up"></i></a>
-    
-    
+
+
     <main>
         <div class="background"></div>
         <header>
             <h1>Contact Us</h1>
         </header>
+
         <section class="message">
             <div class="message__container">
                 <div class="message__map" id="map"></div>
@@ -114,7 +115,7 @@
                     <form class="form">
                         <div class="form__user-details">
                             <div>
-                                <label for="fullname">Full Name</label>
+                                <label for="fullname">Full Name *</label>
                                 <input type="text" id="fullname" placeholder="Full Name">
                             </div>
                             <div>
@@ -123,16 +124,50 @@
                             </div>
                         </div>
                         <!-- TODO remove the display:non; to show Subject input -->
-                        <div class="form__subject" style="display:none">
-                            <label for="subject">Subject</label>
+                        <!-- <div class="form__subject">
+                            <label for="subject">Subject *</label>
                             <input type="text" placeholder="Subject" id="subject">
-                        </div>
+                        </div> -->
                         <div class="form__meg">
-                            <label for="message">Mesasge</label>
+                            <label for="message">Mesasge *</label>
                             <textarea name="" id="Message" placeholder="Type Message"></textarea>
                         </div>
-                        <button>Submit Message <i class="fa fa-paperplane"></i></button>
+                        <div class="form__button-container">
+                            <button>Submit Message <i class="fa fa-paper-plane"></i></button>
+                        </div>
                     </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="details">
+            <div class="details__container">
+                <div class="details__location">
+                    <div>
+                        <i class="fa fa-location"></i>
+                        <div class="details__text">
+                            <h1>Akiama-Oguede Road</h1>
+                            <p>Bonny Island, Rivers State</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="details__contact-info">
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <div class="details__text">
+                            <h1>+234-8139700651</h1>
+                            <p>Contact Number</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="details__opening-hours">
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="details__text">
+                            <h1>Mon - Fri: 8:00 - 5:00</h1>
+                            <p>Operating Hours</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -213,11 +248,11 @@
     </footer>
 
     <script src="./assets/scripts/main.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="assets/scripts/map.js"></script>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>
+    </script> -->
+    <script src="assets/scripts/map.js"></script>
 </body>
 
 </html>

@@ -273,7 +273,7 @@
     transition: .3s;
     pointer-events: none;
     will-change: opacity, transform;
-
+    
     &.show {
         opacity: 1;
         pointer-events: auto;
@@ -281,13 +281,14 @@
 }
 
 main {
-
+    
     // News Letter Section
     .newsletter {
         // background-color:#6a6a6a;
         $width: 90%;
-
-        background: $trans-blue;
+        
+        // background: $trans-blue;
+        background-color:$blue-shade;
         // backdrop-filter: blur(4px);
         padding: 3em 0;
         padding-bottom: 2em;
@@ -295,7 +296,7 @@ main {
         justify-content: center;
         align-items: center;
         flex-flow: column;
-
+        
         &__text {
             text-align: center;
             color: white;
@@ -304,7 +305,7 @@ main {
             flex-flow: column;
             justify-content: center;
             align-items: center;
-
+            
             h1 {
                 font-family: $basefont-bold;
                 font-family: 1rem;
@@ -341,7 +342,7 @@ main {
                 border-top-left-radius: .3em;
                 border-bottom-left-radius: .3em;
             }
-
+            
             button {
                 padding: 1em;
                 background: #ffb700;
@@ -365,6 +366,7 @@ main {
 
 // Footer Section Mobile , Default
 .footer {
+    
     border-top: solid 1px rgba(255, 255, 255, 0.241);
     padding: 4em 2em;
     color: white;
@@ -373,8 +375,8 @@ main {
     align-items: center;
     flex-flow: column;
     font-family: $basefont-regular;
-    background: rgba(0, 0, 0, 0.823);
-    background: $trans-blue;
+    background-color: $blue-shade;
+    // background: $trans-blue;
     // backdrop-filter: blur(4px);
 
     &__container {
