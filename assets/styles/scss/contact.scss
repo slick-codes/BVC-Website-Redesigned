@@ -58,6 +58,8 @@ main {
             background: #94c0e0;
             height: 18em;
             z-index: 0;
+                margin-top:2em;
+                border-radius:.2em;
         }
 
         .form {
@@ -118,6 +120,7 @@ main {
                     border: none;
                     font-family: $basefont-semibold;
                     padding: 1em 2em;
+                    border-radius: .2em;
                 }
             }
 
@@ -177,6 +180,7 @@ main {
             &__map {
                 height: 100%;
                 grid-row-start: auto;
+                margin-top:0;
             }
 
             &__container {
