@@ -268,7 +268,7 @@ main {
 
             h2,
             h3 {
-                color: $dark-blue;
+                // color: $dark-blue;
                 text-align: center;
             }
 
@@ -297,12 +297,12 @@ main {
                 padding: .5em 0;
                 // position: absolute;
                 background-color: $dark-blue;
-                color: $dark-blue;
+                // color: $dark-blue;
                 border: none;
                 bottom: 3em;
                 cursor: pointer;
                 font-family: $basefont-semibold;
-                border: solid 2px $dark-blue;
+                border: solid 2px black;
                 border-radius: .3em;
                 background: transparent;
             }
