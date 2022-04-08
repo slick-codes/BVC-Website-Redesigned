@@ -352,6 +352,50 @@ main {
             }
         }
     }
+    .details{
+        padding:2em 0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color:rgb(250, 250, 250);
+        margin-top:-.1em;
+
+        &__container{
+            display:flex;
+            width:100%;
+            flex-flow:column;
+            padding:0px 1.4em;
+
+            > div{
+                // padding:.5em 1em;
+                padding:.5em 0;
+
+                i{
+                    font-size:20px;
+                    padding:.3em .5em ;
+                }
+
+                > div{
+                    display:flex;
+                    // justify-content: center;
+                    // align-items:center;
+
+                    > div{
+                        padding-left:1em;
+                    }
+                }
+
+                h1{
+                    font-size:1rem;
+                    font-family:$basefont-semibold;
+                }
+                p{
+                    font-size:1rem;
+                    font-family: $basefont-regular;
+                }
+            }
+        }
+    }
 }
 
 @keyframes hovering {
@@ -496,6 +540,30 @@ main {
 
                 input {
                     width: inherit;
+                }
+            }
+        }
+        
+        .details{
+            
+            &__container{
+                flex-flow:row;
+                width:70%;
+                justify-content:center;
+                align-items:center;
+                padding:0;
+
+                > div{
+                    width:100%;
+                    display: flex;
+                    justify-content:center;
+                    align-items:center;
+
+                    > div{
+                        > div{
+                            padding-left:.5em;
+                        }
+                    }
                 }
             }
         }
@@ -759,6 +827,13 @@ main {
 
         &__outer-container {
             width: 65em;
+        }
+    }
+    main{
+        .details{
+            &__container{
+                width:65em;
+            }
         }
     }
 }
