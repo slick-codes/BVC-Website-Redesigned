@@ -94,12 +94,30 @@ main {
 @media (min-width:700px) {
     .accreditation {
         &__container {
-            width: 32em !important;
+            // width: 40em !important;
+            // display:grid;
+            // grid-template-columns:1fr 1fr 1fr 1fr;
+            max-width:32em;
 
             .grid_card {
+                hr{
+                    width:100%;
+                    margin-top:.5em;
+                }
                 
                 &__container {
+                    display:grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
                     
+                    &.sponsors{
+                        // width:100%;
+                        // background:blue;
+
+                        > div{
+                            height:12em;
+                            width:12em;
+                        }
+                    }
                 }
             }
         }
