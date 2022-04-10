@@ -74,7 +74,7 @@ const dropdownHeightUpdater = function () {
         }
 	};
 }else{
-	dropdown.style.height = 100 + '%'
+	dropdown.style.height = 'auto';
 }
 
 });
