@@ -119,6 +119,13 @@
                 align-items:center;
                 // padding: 1.5em 0;
 
+                > div{
+                    section:last-child{
+                        margin-top:1em;
+                    }
+                }
+                
+
 
                 &__list {
                     padding-right: .4em;
@@ -708,6 +715,7 @@ main {
                 }
 
                 .dropdown {
+                    
                     position: absolute;
                     background: rgba(255, 255, 255, 0.939) !important;
                     // backdrop-filter: blur(76px) ;
@@ -722,6 +730,14 @@ main {
                     border-top-left-radius: 0;
                     border-top-right-radius: 0;
                     // border-top:solid 3px $base-blue;
+
+                    >div{
+                        display:flex;
+
+                        section:last-child{
+                            margin-top:0;
+                        }
+                    }
 
 
                     transform: translateY(6em);
@@ -763,6 +779,7 @@ main {
 
                         h2 {
                             color: black;
+                            margin:0;
                         }
 
 
