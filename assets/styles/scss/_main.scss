@@ -206,6 +206,9 @@
         padding: .5em 0;
         cursor: pointer;
         // z-index: 14;
+        i{
+            pointer-events: none;
+        }
 
 
         &.hide:after {
@@ -221,7 +224,7 @@
             height: 100vh;
             width: 100%;
             position: absolute;
-            background: #ffffff50;
+            background: #00000041;
             z-index: -1;
             // backdrop-filter: blur(2px);
         }
@@ -230,27 +233,33 @@
     &__icon {
         pointer-events: none;
         background: black;
-        height: .15em;
+        // height: .15em;
         width: 1em;
+        border-top:solid 2px black;
+
+        // Remove the following letter
+        position:absolute;
+        opacity:0;
 
         &:before,
         &:after {
             content: "";
             display: block;
-            height: inherit;
+            // height: inherit;
+            border:inherit;
             width: inherit;
             position: relative;
         }
 
         &:before {
             background: inherit;
-            top: -.33em;
-            height: 0.1521em;
+            top: -.4em;
+            // height: 0.1521em;
         }
 
         &:after {
             background: inherit;
-            top: .2em;
+            top: .3em;
         }
     }
 
