@@ -67,6 +67,7 @@ const dropdownHeightUpdater = function () {
 		  );
 
       dropdownButton.onclick = function (event) {
+		  event.preventDefault()
         if (dropdown.style.height == 0 + "px") {
           dropdown.style.height = height + 25 + "px";
         } else {
