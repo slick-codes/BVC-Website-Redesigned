@@ -3,7 +3,7 @@
 
 const faqCard = document.querySelectorAll('.faq .faq_card')
 // const hideClassName = '--hide' 
-const dropdownTransitionDuration = '.1s'
+// const dropdownTransitionDuration = '.1s'
 
 const clearFaqCardClass = function( exclude ){
     faqCard.forEach( card => {
@@ -50,6 +50,6 @@ faqCard.forEach( card => {
 }
 
 window.onload = function(){ // Overiding the main.js file 
-    dropdownHeightUpdater() //  Overidig main.js file
+    load() //  Overidig main.js file
     faqDropDown()
 }

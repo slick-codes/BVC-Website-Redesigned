@@ -54,7 +54,7 @@
         justify-content: flex-start;
         padding-top: 3em;
         transform: translateX(-120%);
-        transition: .3s;
+        // transition: .3s;
         // transition-timing-function: cubic-bezier(0, 1.33, 0.65, 1.1);
         box-shadow: 7px 0px 20px 4px #0000001c;
         // backdrop-filter: blur(20px);
@@ -109,11 +109,15 @@
 
 
             .dropdown {
-                transition: .1s;
+                // transition: .1s;
                 overflow: hidden;
                 transition-timing-function: linear;
                 background: $dark-blue;
-                padding: 1.5em 0;
+                display:flex;
+                flex-flow:column;
+                justify-content:center;
+                align-items:center;
+                // padding: 1.5em 0;
 
 
                 &__list {
@@ -614,7 +618,7 @@ main {
         position: sticky;
         top: 0;
         // background:white;
-        transition: .3s;
+        // transition: .3s;
 
         &.transparent {
             background: #ffffffa6;
@@ -713,7 +717,7 @@ main {
 
                     transform: translateY(6em);
                     opacity: 0;
-                    transition: .2s;
+                    // transition: .2s;
 
 
 
