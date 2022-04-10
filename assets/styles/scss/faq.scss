@@ -55,10 +55,12 @@ main {
             max-width: 50em;
             border-left: solid 1px rgb(191, 191, 191);
             border-right: solid 1px rgb(191, 191, 191);
+            border-bottom: solid 1px #bfbfbf;
             // background:blue;
             // margin-top:1em;
-            
-            &:first-child{
+
+
+            &:first-child {
                 border-top: solid 1px rgb(191, 191, 191);
             }
 
@@ -67,15 +69,18 @@ main {
                 display: flex;
                 // justify-content:center;
                 align-items: center;
-                border-bottom: solid 1px rgb(191, 191, 191);
-                border-top: none;
+                // border-top: solid 1px rgb(191, 191, 191);
+                // border-top: none;
                 padding: 1em 1em;
-                cursor:pointer;
+                cursor: pointer;
 
-               
-                &:hover > div:first-child{
-                    transition:transform .3s;
-                    transform:rotate(90deg);
+                * {
+                    pointer-events: none;
+                }
+
+                >div:first-child {
+                    transition: transform .3s;
+
                 }
 
                 i {
@@ -88,15 +93,15 @@ main {
 
             }
 
-            &.--active{
-                
-                .faq_card__title{
-                    border-bottom-color:transparent;
+            &.--active {
+
+                .faq_card__title {
+                    border-bottom-color: transparent;
                 }
             }
 
             &__dropdown {
-                height: 0;
+                height: 100%;
                 overflow: hidden;
                 padding: 0em 1em;
                 display: flex;
@@ -104,16 +109,11 @@ main {
                 align-items: center;
                 font-family: $basefont-regular;
                 background-color: $dark-blue;
-                color:white;
-
-            }
-            
-            &.--active .faq_card__dropdown {
-                height: 100%;
-                // border-bottom: solid 1px rgb(191, 191, 191);
+                color: white;
                 border-left: solid 3px white;
                 border-right: solid 3px white;
-                padding: 1em 1em;
+                // border-bottom: solid 1px rgb(191, 191, 191);
+
             }
         }
 
