@@ -3,7 +3,7 @@ const navToggleButton = document.querySelector(".nav__menu");
 const navLogo = document.querySelector(".nav__logo");
 const navSlider = document.querySelector(".nav__link-container");
 const navDesktopViewScreen = 1000;
-const dropdownTransitionDuration = ".3s";
+const dropdownTransitionDuration = ".1s";
 
 document.querySelectorAll("[data-aos-delay]").forEach((element) => {
   if (window.innerWidth < navDesktopViewScreen)
@@ -82,7 +82,7 @@ const dropdownHeightUpdater = function () {
 };
 
 function load(){
-	navSlider.style.transitionDuration = dropdownTransitionDuration
+	navSlider.style.transitionDuration = '.3s';
 	dropdownHeightUpdater();
 	solidNavigationEffect();
 }
