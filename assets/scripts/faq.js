@@ -1,6 +1,3 @@
-
-
-
 const faqCard = document.querySelectorAll('.faq .faq_card')
 // const hideClassName = '--hide' 
 // const dropdownTransitionDuration = '.1s'
@@ -25,12 +22,9 @@ faqCard.forEach( card => {
     const dropdown = card.querySelector('.faq_card__dropdown')
     const height = dropdown.clientHeight
     dropdown.style.height = 0
-    
-    
+        
     setTimeout( () => dropdown.style.transitionDuration = dropdownTransitionDuration, 300 )
-    
-    
-    
+
     cardTitle.onclick = function(event){
         clearFaqCardClass(card)
         const icon = card.querySelector('.faq_card__title > div:first-child i')
