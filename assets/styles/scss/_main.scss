@@ -272,6 +272,50 @@
 
 }
 
+
+.backgroundSlider{
+    // padding: 15em 0;
+ // background:$gray;
+ background-color: #17087980;
+ background-image: url(../../images/slides/slide1.jpg);
+ background-size: cover;
+ background-position: right;
+ background-repeat: no-repeat;
+ height: 100vh;
+ width: 100%;
+ background-blend-mode: overlay;
+ position: fixed;
+ top: 0;
+ z-index: -1;
+ // position:relative;
+ // overflow: hidden; 
+ // display:flex;
+ // justify-content:center;
+ // align-items:center;
+ .slide {
+     position: absolute;
+     width: 100%;
+     height: inherit;
+     opacity: 1;
+     background: inherit;
+     background-blend-mode: inherit;
+     background-size: inherit;
+     background-repeat: no-repeat;
+     background-position: center top;
+     pointer-events: auto;
+     will-change: opacity;
+     transition-property: opacity, transform;
+     transition: 1s;
+ 
+     &.hide {
+         opacity: 0;
+         pointer-events: none;
+         transform: scale(2) translateY(-10em);
+         // transform: translateY(-1em);
+     }
+ }
+}
+
 .up__button {
     height: 2em;
     width: 2em;

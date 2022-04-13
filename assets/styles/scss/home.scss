@@ -1,69 +1,26 @@
 @import 'main';
 
 
-.backgroundSlider{
-       // padding: 15em 0;
-    // background:$gray;
-    background-color: #17087980;
-    background-image: url(../../images/slides/slide1.jpg);
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    background-blend-mode: overlay;
-    position: fixed;
-    top: 0;
-    z-index: -1;
-    // position:relative;
-    // overflow: hidden; 
-    // display:flex;
-    // justify-content:center;
-    // align-items:center;
-}
 
 
 header {
-    background:rgba(11, 11, 19, 0.459);
-    height:25em;
+    background: rgba(4, 4, 160, 0.52);
+    height: 25em;
     display: flex;
-    flex-flow:column;
+    flex-flow: column;
     justify-content: center;
-    align-items:center;
-    margin-top:-4em;
- 
+    align-items: center;
+    margin-top: -4em;
 
-    h1{
+    h1 {
         font-size: 4rem;
-        color:white;
+        color: white;
         font-family: $basefont-bold;
         z-index: 1;
-        line-height:4rem;
-        text-align:center;
+        line-height: 4rem;
+        text-align: center;
     }
 
-    .slide {
-        position: absolute;
-        width: 100%;
-        height: inherit;
-        opacity: 1;
-        background: inherit;
-        background-blend-mode: inherit;
-        background-size: inherit;
-        background-repeat: no-repeat;
-        background-position: center top;
-        pointer-events: auto;
-        will-change: opacity;
-        transition-property: opacity, transform;
-        transition: 1s;
-
-        &.hide {
-            opacity: 0;
-            pointer-events: none;
-            transform: scale(2) translateY(-10em);
-            // transform: translateY(-1em);
-        }
-    }
 }
 
 
@@ -192,7 +149,7 @@ main {
 
         p {
             padding: 1em 0;
-            padding-top:0;
+            padding-top: 0;
             color: white;
             font-family: $basefont-regular;
         }
@@ -204,7 +161,7 @@ main {
             font-family: $basefont-bold;
             padding: .7em 2.5em;
             cursor: pointer;
-            border-radius:.3em;
+            border-radius: .3em;
         }
     }
 
@@ -252,7 +209,7 @@ main {
             margin: 0 auto;
             width: 100%;
             height: 25em !important;
-            border-radius:.3em;
+            border-radius: .3em;
 
             img {
                 width: 100%;
@@ -267,9 +224,9 @@ main {
             }
         }
 
-        &__image-container{
-            height:18.6em;
-            overflow:hidden;
+        &__image-container {
+            height: 18.6em;
+            overflow: hidden;
         }
 
         &__info {
@@ -378,8 +335,8 @@ main {
     header {
         height: 100vh;
 
-        h1{
-            font-size:6rem;
+        h1 {
+            font-size: 6rem;
         }
     }
 
@@ -480,10 +437,11 @@ main {
             }
         }
     }
-}
 
-@media (min-height:700px) {
-    header {
-        height:47em;
+
+    @media (min-height:700px) {
+        header {
+            height: 47em;
+        }
     }
 }
